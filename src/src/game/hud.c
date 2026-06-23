@@ -282,7 +282,7 @@ void render_hud_mario_lives(void) {
         print_text(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(22), HUD_TOP_Y, "X"); // 'Luigi Head' glyph
     }
     print_text(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(38), HUD_TOP_Y, "*"); // 'X' glyph
-    print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(54), HUD_TOP_Y, "%d", gHudDisplay.lives);
+    print_text_fmt_int(GFX_DIMENSIONS_RECT_FROM_LEFT_EDGE(54), HUD_TOP_Y, "%2d", gHudDisplay.lives);
 }
 
 /**
@@ -301,7 +301,7 @@ void render_hud_ai_gen(void) {
 void render_hud_coins(void) {
     print_text(168, HUD_TOP_Y, "+"); // 'Coin' glyph
     print_text(184, HUD_TOP_Y, "*"); // 'X' glyph
-    print_text_fmt_int(198, HUD_TOP_Y, "%d", gHudDisplay.coins);
+    print_text_fmt_int(198, HUD_TOP_Y, "%2d", gHudDisplay.coins);
 }
 
 //Render red coins collected in hud
@@ -309,7 +309,7 @@ void render_hud_red_coins(void) {
     if (gRedCoinsCollected >= 1) {
         print_text(168, HUD_TOP_Y - 18, "#"); // 'Coin' glyph
         print_text(184, HUD_TOP_Y - 18, "*"); // 'X' glyph
-        print_text_fmt_int(198, HUD_TOP_Y - 18, "%d", gRedCoinsCollected);
+        print_text_fmt_int(198, HUD_TOP_Y - 18, "%2d", gRedCoinsCollected);
     }
 }
 
@@ -340,7 +340,7 @@ void render_hud_stars(void) {
         print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X) + 16, HUD_TOP_Y, "*"); // 'X' glyph
     }
     print_text_fmt_int((showX * 14) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(HUD_STARS_X - 16),
-                       HUD_TOP_Y, "%d", gHudDisplay.stars);
+                       HUD_TOP_Y, "%2d", gHudDisplay.stars);
 }
 
 /**
